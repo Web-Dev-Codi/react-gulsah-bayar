@@ -14,10 +14,10 @@ function NavBar() {
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
           </label>
           <ul tabIndex={0} id="dropdown-content" className="menu menu-compact bg-primary dropdown-content shadow rounded-box w-52">
-            <li className=""><Link to='karakaya'>Karakaya</Link></li>
-            <li className=""><Link to='/socialjustice'>Social Justice and Diversity</Link></li>
-            <li className=""><Link to='/publicAdministration'>Public Administration</Link></li>
-            <li className=""><Link to='about'>About Me</Link></li>
+            <li className="normal-case"><Link to='karakaya'>Karakaya</Link></li>
+            <li className="normal-case"><Link to='/socialjustice'>Social Justice and Diversity</Link></li>
+            <li className="normal-case"><Link to='/publicAdministration'>Public Administration</Link></li>
+            <li className="normal-case"><Link to='about'>About Me</Link></li>
           </ul>
         </div>
       </div>
@@ -29,12 +29,12 @@ function NavBar() {
                 Politics
               </a>
               <ul className="rounded-b-lg">
-                <li className=""><Link to='/socialjustice'>Social Justice and Diversity</Link></li>
-                <li className=""><Link to='/publicAdministration'>Public Administration</Link></li>
+                <li className="normal-case"><Link to='/socialjustice'>Social Justice and Diversity</Link></li>
+                <li className="normal-case"><Link to='/publicAdministration'>Public Administration</Link></li>
               </ul>
             </li>
-            <li className="underline"><Link to='karakaya'>Karakaya</Link></li>
-            <li className="underline">
+            <li className="underline normal-case"><Link to='karakaya'>Karakaya</Link></li>
+            <li className="underline normal-case">
               <Link to='about'>
                 About Me
               </Link>
