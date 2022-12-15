@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 function AboutMe() {
   return (
@@ -13,9 +15,12 @@ function AboutMe() {
       <p className='text-lg text-gray-400'>
         Site Built by Brian Cordisco
       </p>
-      <Link to='/' className="btn btn-base-100 btn-sm">
-        Back To Home
-      </Link>
+      <div className="mb-2">
+        <Link to='/' className="btn btn-base-100 btn-sm">
+          <FontAwesomeIcon className="mr-1 " icon={faArrowLeft} />
+          Back To Home
+        </Link>
+      </div>
     </div>
   )
 }

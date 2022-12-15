@@ -1,49 +1,117 @@
-import { Link } from 'react-router-dom';
+import { useFormik } from 'formik';
+import * as Yup from 'yup'
+import Success from './Success';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { Link, Routes, Route, useNavigate } from 'react-router-dom';
 
 
 
 function Contact() {
 
+  //
+  const navigate = useNavigate();
+
+
+  // formik logic
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      message: '',
+    },
+    //validate form 
+    validationSchema: Yup.object({
+      name: Yup.string().max(20, 'Name must be 20 characters or less').required('Name is required'),
+      email: Yup.string().email('Email is required').required('Email is required'),
+      message: Yup.string().required('Message is required'),
+      terms: Yup.array().required('Terms of service must be checked')
+    }),
+    //Submit controller
+    onSubmit: (values) => {
+
+      navigate('/success');
+
+    }
+
+  })
   return (
-    <div className="h-96 w-full">
+    <>
+      <div className="h-72 w-10/12 mx-auto my-10">
+        <div className="w-full h-96  flex items-center justify-center">
+          <form onSubmit={formik.handleSubmit} className="">
+            <div className="md:flex items-center">
+              <div className="md:w-72 flex flex-col">
+                <label className={`text-base font-semibold leading-none text-gray-800 ${formik.touched.name && formik.errors.name ? "text-error" : ""}`} htmlFor='name'>
+                  {formik.touched.name && formik.errors.name ? formik.errors.name : "Name"}
+                </label>
+                <input
+                  arial-label="Please input name"
+                  type="text"
+                  name="name"
+                  className={"text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100"}
+                  placeholder="Please input name"
+                  value={formik.values.name}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
 
-
-      <div className="w-full h-96 flex items-center justify-center">
-        <div className="">
-          <div className="md:flex items-center">
-            <div className="md:w-72 flex flex-col">
-              <label className="text-base font-semibold leading-none text-gray-800">Name</label>
-              <input tabIndex={0} arial-label="Please input name" type="name" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100" placeholder="Please input  name" />
+              </div>
+              <div className="md:w-72 flex flex-col md:ml-6 md:mt-0 mt-4">
+                <label className={`text-base font-semibold leading-none text-gray-800 ${formik.touched.email && formik.errors.email ? " text-error" : ""}`}>
+                  {formik.touched.email && formik.errors.email ? formik.errors.email : "Email"}
+                </label>
+                <input
+                  arial-label="Please input email address"
+                  type="text"
+                  name="email"
+                  className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100"
+                  placeholder="Please input email address"
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+              </div>
             </div>
-            <div className="md:w-72 flex flex-col md:ml-6 md:mt-0 mt-4">
-              <label className="text-base font-semibold leading-none text-gray-800">Email Address</label>
-              <input tabIndex={0} arial-label="Please input email address" type="name" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100" placeholder="Please input email address" />
+            <div>
+              <div className="w-full flex flex-col">
+                <label className={`text-base font-semibold leading-none text-gray-800 ${formik.touched.message && formik.errors.message ? " text-error" : ""}`}>
+                  {formik.touched.message && formik.errors.message ? formik.errors.message : "Message"}
+                </label>
+                <textarea
+                  aria-label="leave a message"
+                  type="text"
+                  name="message"
+                  className="h-36 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none"
+                  value={formik.values.message}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+              </div>
             </div>
-          </div>
-          <div className="md:flex items-center mt-8">
-            <div className="md:w-72 flex flex-col">
-              <label className="text-base font-semibold leading-none text-gray-800">Company name</label>
-              <input tabIndex={0} role="input" arial-label="Please input company name" type="name" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 " placeholder="Please input company name" />
+            <div className='text-xs py-2'><p>Terms of Service</p></div>
+            <div className="flex mb-1">
+              <label htmlFor="terms" className="text-sm">
+                <input
+                  type="checkbox"
+                  name="terms"
+                  value="checked"
+                  onChange={formik.handleChange}
+                  className="focus:oultine-none focus:border-indigo-700 bg-gray-100 border rounded border-gray-200 mr-2"
+                />
+              </label>
+              <p className="text-xs leading-3 text-white">By clicking submit you agree to our terms of service and your data is protected.</p>
             </div>
-            <div className="md:w-72 flex flex-col md:ml-6 md:mt-0 mt-4">
-              <label className="text-base font-semibold leading-none text-gray-800">Country</label>
-              <input tabIndex={0} arial-label="Please input country name" type="name" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100" placeholder="Please input country name" />
+            <div className="flex items-center justify-center w-full">
+              <button
+                className="btn btn-primary text-base font-semibold leading-none text-white px-10 bg-indigo-700 rounded hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none"
+                type="submit"
+              >SUBMIT</button>
             </div>
-          </div>
-          <div>
-            <div className="w-full flex flex-col">
-              <label className="text-base font-semibold leading-none text-gray-800">Message</label>
-              <textarea tabIndex={0} aria-label="leave a message" role="textbox" type="name" className="h-36 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none" defaultValue={""} />
-            </div>
-          </div>
-          <p className="text-xs leading-3 text-gray-600 mt-4">By clicking submit you agree to our terms of service, privacy policy and how we use data as stated</p>
-          <div className="flex items-center justify-center w-full">
-            <button className="mt-2 btn btn-primary text-base font-semibold leading-none text-white py-4 px-10 bg-indigo-700 rounded hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none">SUBMIT</button>
-          </div>
+          </form>
         </div>
       </div>
-
-    </div>
+    </>
   )
 }
 
