@@ -72,7 +72,7 @@ function Contact() {
                   onBlur={formik.handleBlur}
                 />
               </div>
-              <input type="hidden" name="_next" value="http://localhost:3000/success" />
+              <input type="hidden" name="_next" value="https://gulsah-bayar.vercel.app/success" />
             </div>
             <div>
               <div className="w-full flex flex-col">
