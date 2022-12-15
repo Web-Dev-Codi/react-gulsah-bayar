@@ -1,18 +1,8 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup'
-// import { useNavigate } from 'react-router-dom';
-
-
-
-
-
 
 
 function Contact() {
-
-
-
-
   // formik logic
   const formik = useFormik({
     initialValues: {
@@ -28,12 +18,6 @@ function Contact() {
       terms: Yup.array().required('Terms of service must be checked')
     }),
 
-    //Submit controller
-    // onSubmit: (values) => {
-    //   console.log(values);
-
-
-    // }
   })
   return (
     <>
