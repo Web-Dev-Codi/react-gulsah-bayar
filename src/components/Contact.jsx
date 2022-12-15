@@ -29,17 +29,17 @@ function Contact() {
     }),
 
     //Submit controller
-    onSubmit: (values) => {
-      console.log(values);
+    // onSubmit: (values) => {
+    //   console.log(values);
 
 
-    }
+    // }
   })
   return (
     <>
       <div className="h-72 w-10/12 mx-auto my-10">
         <div className="w-full h-96  flex items-center justify-center">
-          <form action="https://formsubmit.co/cordiscobrian@gmail.com" onSubmit={formik.handleSubmit} method="POST" className="">
+          <form action="https://formsubmit.co/cordiscobrian@gmail.com" method="POST" className="">
             <div className="md:flex items-center">
               <div className="md:w-72 flex flex-col">
                 <label className={`text-base font-semibold leading-none text-gray-800 ${formik.touched.name && formik.errors.name ? "text-error" : ""}`} htmlFor='name'>
