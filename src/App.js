@@ -9,6 +9,7 @@ import Karakaya from './components/Karakaya';
 import PublicAdministration from './components/PublicAdministration';
 import SocialJustice from './components/SocialJustice';
 import Impressum from './components/Impressum';
+import Success from './components/Success';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path='/publicAdministration' element={<PublicAdministration />} />
             <Route path='/socialjustice' element={<SocialJustice />} />
             <Route path='/impressum' element={<Impressum />} />
+            <Route path='/success' element={<Success />} />
           </Routes>
 
         </main>

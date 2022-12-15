@@ -1,16 +1,16 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup'
-import Success from './Success';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
-import { Link, Routes, Route, useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+
+
+
+
 
 
 
 function Contact() {
 
-  //
-  const navigate = useNavigate();
+
 
 
   // formik logic
@@ -27,19 +27,19 @@ function Contact() {
       message: Yup.string().required('Message is required'),
       terms: Yup.array().required('Terms of service must be checked')
     }),
+
     //Submit controller
     onSubmit: (values) => {
+      console.log(values);
 
-      navigate('/success');
 
     }
-
   })
   return (
     <>
       <div className="h-72 w-10/12 mx-auto my-10">
         <div className="w-full h-96  flex items-center justify-center">
-          <form onSubmit={formik.handleSubmit} className="">
+          <form action="https://formsubmit.co/cordiscobrian@gmail.com" onSubmit={formik.handleSubmit} method="POST" className="">
             <div className="md:flex items-center">
               <div className="md:w-72 flex flex-col">
                 <label className={`text-base font-semibold leading-none text-gray-800 ${formik.touched.name && formik.errors.name ? "text-error" : ""}`} htmlFor='name'>
@@ -63,7 +63,7 @@ function Contact() {
                 </label>
                 <input
                   arial-label="Please input email address"
-                  type="text"
+                  type="email"
                   name="email"
                   className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100"
                   placeholder="Please input email address"
@@ -72,6 +72,7 @@ function Contact() {
                   onBlur={formik.handleBlur}
                 />
               </div>
+              <input type="hidden" name="_next" value="http://localhost:3000/success" />
             </div>
             <div>
               <div className="w-full flex flex-col">
