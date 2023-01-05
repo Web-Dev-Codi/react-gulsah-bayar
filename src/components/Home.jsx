@@ -34,7 +34,7 @@ function Home() {
             >
               <div className="grid grid-cols-2 grid-rows-[repeat(7,auto)] gap-6">
                 <div className="col-start-1 col-end-2 row-start-1 row-end-5" >
-                  <img src={smile} className="rounded-tl-[25vw] rounded-bl-[25vw] rounded-br-[25vw] rounded-tr-[25vw]" />
+                  <img src={smile} alt="" className="rounded-tl-[25vw] rounded-bl-[25vw] rounded-br-[25vw] rounded-tr-[25vw]" />
                 </div>
                 <div className="cols-start-2 cols-end-3 row-start-1 row-end-3">
                   <img src={stoic} alt="" className="rounded-tl-[25vw] rounded-bl-[25vw] rounded-br-[25vw]" />
