@@ -1,15 +1,11 @@
-import smile from './assets/smile500x750.png'
-import stoic from './assets/stoicsquare500x500.png'
-import looksmile from './assets/looksmile500x750.png'
-import glasses from './assets/glasses500x500.png'
 import { motion } from "framer-motion"
 
 function Home() {
   return (
     <>
 
-      <div className="w-96 xs:w-80 md:w-full mx-auto rounded-lg px-4 pt-5">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 glass shadow rounded-box pt-5 px-4">
+      <div className="w-96 xs:w-80 md:w-full mx-auto rounded-lg py-4 pt-5">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 glass shadow rounded-box py-5 px-4">
           <div className="self-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
@@ -32,7 +28,20 @@ function Home() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.3, type: "tween" }}
             >
-              <div className="grid grid-cols-2 grid-rows-[repeat(7,auto)] gap-6">
+
+              <div class="container">
+                <div class="flex flex-row-reverse">
+                  <div>
+                    <div class="petal-1"></div>
+                    <div class="petal-2"></div>
+                  </div>
+                  <div>
+                    <div class="petal-3"></div>
+                    <div class="petal-4 "></div>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="grid grid-cols-2 grid-rows-[repeat(7,auto)] gap-6">
                 <div className="col-start-1 col-end-2 row-start-1 row-end-5" >
                   <img src={smile} alt="" className="rounded-tl-[25vw] rounded-bl-[25vw] rounded-br-[25vw] rounded-tr-[25vw]" />
                 </div>
@@ -45,7 +54,7 @@ function Home() {
                 <div className="cols-start-1 cols-end-2 row-start-3 row-end-7">
                   <img src={looksmile} alt="" className="rounded-tl-[25vw] rounded-bl-[25vw] rounded-br-[25vw] rounded-tr-[25vw]" />
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>

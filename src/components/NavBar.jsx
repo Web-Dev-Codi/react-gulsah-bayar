@@ -22,27 +22,6 @@ function NavBar() {
           </ul>
         </div>
       </div>
-      {/* <div className="navbar-center xl:navbar-start xl:flex-start xl:absolute lg:navbar-start lg:flex-start lg:absolute md:navbar-start md:flex-start md:absolute">
-        <div className="hidden md:visible lg:flex">
-          <ul className="menu menu-horizontal p-0 text-white-100 rounded-full">
-            <li className="underline" tabIndex={0}>
-              <a>
-                Politics
-              </a>
-              <ul className="rounded-b-lg">
-                <li className="normal-case"><Link to='/socialjustice'>Social Justice and Diversity</Link></li>
-                <li className="normal-case"><Link to='/publicAdministration'>Public Administration</Link></li>
-              </ul>
-            </li>
-            <li className="underline normal-case"><Link to='karakaya'>Karakaya</Link></li>
-            <li className="underline normal-case">
-              <Link to='about'>
-                About Me
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div> */}
       <div className="navbar-end">
         <Link to='/contact' className="text-lg underline">CONTACT</Link>
       </div>

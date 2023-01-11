@@ -1,0 +1,4 @@
+FFF7C4 light yellow
+A69BD1 purple
+FFA0C5 pink
+B9EDB9 green

@@ -11,7 +11,8 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: black;
-
+  line-height: 1.6;
+  letter-spacing: 1px;
 }
 
 #dropdown {
@@ -76,5 +77,94 @@ html {
     url('./components/fonts/berlin-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
 
+.petal-1 {
+  width: 250px;
+  height: 250px;
+  background-color: #FFF7C4;
+  border-bottom-left-radius: 250px;
+  border-top-right-radius: 250px;
+  transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.petal-2 {
+  width: 250px;
+  height: 250px;
+  background-color: #A69BD1;
+  border-bottom-left-radius: 250px;
+  border-top-right-radius: 250px;
+}
+
+.petal-3 {
+  width: 250px;
+  height: 250px;
+  background-color: #FFA0C5;
+  border-bottom-left-radius: 250px;
+  border-top-right-radius: 250px;
+}
+
+.petal-4 {
+  width: 250px;
+  height: 250px;
+  background-color: #B9EDB9;
+  border-bottom-left-radius: 250px;
+  border-top-right-radius: 250px;
+  transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+@media (max-width: 450px) {
+  .petal-1 {
+    width: 125px;
+    height: 125px;
+    background-color: #FFF7C4;
+    border-bottom-left-radius: 250px;
+    border-top-right-radius: 250px;
+    transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+  }
+
+  .petal-2 {
+    width: 125px;
+    height: 125px;
+    background-color: #A69BD1;
+    border-bottom-left-radius: 250px;
+    border-top-right-radius: 250px;
+  }
+
+  .petal-3 {
+    width: 125px;
+    height: 125px;
+    background-color: #FFA0C5;
+    border-bottom-left-radius: 250px;
+    border-top-right-radius: 250px;
+  }
+
+  .petal-4 {
+    width: 125px;
+    height: 125px;
+    background-color: #B9EDB9;
+    border-bottom-left-radius: 250px;
+    border-top-right-radius: 250px;
+    transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+  }
 }
