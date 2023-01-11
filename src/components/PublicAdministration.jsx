@@ -7,7 +7,7 @@ function PublicAdministration() {
   return (
     <div>PublicAdministration
 
-      <div className="mb-2">
+      <div className="mb-2 shadow rounded-box">
         <Link to='/' className="btn btn-base-100 btn-sm">
           <FontAwesomeIcon className="mr-1 " icon={faArrowLeft} />
           Back To Home

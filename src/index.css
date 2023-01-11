@@ -2,7 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-#dropdown {
+
+body,
+html {
+  background-image: url("./components/assets/background.jpg");
+  background-size: fixed;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: black;
+
+}
+
+/* #dropdown {
   position: relative;
   display: inline-block;
 }
@@ -22,4 +33,4 @@
 
 #dropdown:hover #dropdown-content {
   display: block;
-}
+} */

@@ -10,6 +10,7 @@ import PublicAdministration from './components/PublicAdministration';
 import SocialJustice from './components/SocialJustice';
 import Impressum from './components/Impressum';
 import Success from './components/Success';
+import Politics from './components/Politics';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path='/about' element={<AboutMe />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/karakaya' element={<Karakaya />} />
+            <Route path='/politics' element={<Politics />} />
             <Route path='/publicAdministration' element={<PublicAdministration />} />
             <Route path='/socialjustice' element={<SocialJustice />} />
             <Route path='/impressum' element={<Impressum />} />

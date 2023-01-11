@@ -9,7 +9,7 @@ function Impressum() {
 
 
       <div className="lg:p-32 md:p-16 sm:p-8 min-w-0 w-full flex-auto lg:static lg:max-h-full lg:overflow-visible">
-        <div className="w-full flex">
+        <div className="w-full flex glass shadow rounded-box">
           <div className="min-w-0 flex-auto px-4 sm:px-6 xl:px-8 pt-10 pb-24 lg:pb-16">
             <h1 className="text-3xl font-extrabold text-gray-900 tracking-tight">Cool Heading</h1>
             <p className="mt-1 text-lg font-semibold text-green-400">I love Tailwind CSSs</p>

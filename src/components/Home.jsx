@@ -8,8 +8,8 @@ function Home() {
   return (
     <>
 
-      <div className="w-96 xs:w-80 md:w-full mx-auto rounded-lg px-4 lg:pt-5">
-        <div className="flex flex-col-reverse lg:grid lg:grid-cols-2">
+      <div className="w-96 xs:w-80 md:w-full mx-auto rounded-lg px-4 pt-5">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 glass shadow rounded-box pt-5 px-4">
           <div className="self-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
