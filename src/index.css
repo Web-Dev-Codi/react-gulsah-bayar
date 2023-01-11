@@ -5,6 +5,7 @@
 
 body,
 html {
+  font-family: 'berlinregular';
   background-image: url("./components/assets/background.jpg");
   background-size: fixed;
   background-repeat: no-repeat;
@@ -13,7 +14,7 @@ html {
 
 }
 
-/* #dropdown {
+#dropdown {
   position: relative;
   display: inline-block;
 }
@@ -33,4 +34,47 @@ html {
 
 #dropdown:hover #dropdown-content {
   display: block;
-} */
+}
+
+
+@font-face {
+  font-family: 'berlinitalic';
+  src: url('./components/fonts/berlin_-_italic-webfont.woff2') format('woff2'),
+    url('./components/fonts/berlin_-_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'berlin_boldbold';
+  src: url('./components/fonts/berlin_bold-webfont.woff2') format('woff2'),
+    url('./components/fonts/berlin_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'berlin_xboldxbold';
+  src: url('./components/fonts/berlin_x-bold-webfont.woff2') format('woff2'),
+    url('./components/fonts/berlin_x-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'berlinregular';
+  src: url('./components/fonts/berlin-webfont.woff2') format('woff2'),
+    url('./components/fonts/berlin-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
