@@ -29,7 +29,7 @@ function Home() {
               transition={{ duration: 1.3, type: "tween" }}
             >
 
-              <div class="container">
+              <div class="flex justify-center">
                 <div class="flex flex-row-reverse">
                   <div>
                     <div class="petal-1"></div>

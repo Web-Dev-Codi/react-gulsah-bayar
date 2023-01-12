@@ -7,7 +7,6 @@ body,
 html {
   font-family: 'berlinregular';
   background-image: url("./components/assets/background.jpg");
-  background-size: fixed;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: black;
@@ -123,48 +122,35 @@ html {
   transform: scale(-1, 1);
 }
 
-@media (max-width: 450px) {
+
+@media (max-width: 650px) {
+
+  body,
+  html {
+    font-family: 'berlinregular';
+    background-image: url("./components/assets/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 430px 100%vh;
+  }
+
   .petal-1 {
     width: 125px;
     height: 125px;
-    background-color: #FFF7C4;
-    border-bottom-left-radius: 250px;
-    border-top-right-radius: 250px;
-    transform: scale(-1, 1);
-    -moz-transform: scale(-1, 1);
-    -webkit-transform: scale(-1, 1);
-    -o-transform: scale(-1, 1);
-    -ms-transform: scale(-1, 1);
-    transform: scale(-1, 1);
   }
 
   .petal-2 {
     width: 125px;
     height: 125px;
-    background-color: #A69BD1;
-    border-bottom-left-radius: 250px;
-    border-top-right-radius: 250px;
   }
 
   .petal-3 {
     width: 125px;
     height: 125px;
-    background-color: #FFA0C5;
-    border-bottom-left-radius: 250px;
-    border-top-right-radius: 250px;
   }
 
   .petal-4 {
     width: 125px;
     height: 125px;
-    background-color: #B9EDB9;
-    border-bottom-left-radius: 250px;
-    border-top-right-radius: 250px;
-    transform: scale(-1, 1);
-    -moz-transform: scale(-1, 1);
-    -webkit-transform: scale(-1, 1);
-    -o-transform: scale(-1, 1);
-    -ms-transform: scale(-1, 1);
-    transform: scale(-1, 1);
   }
 }

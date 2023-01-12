@@ -11,7 +11,7 @@ function Politics() {
   return (
 
     <div className="flex flex-col justify-center">
-      <div className="border border-neutral self-center">
+      <div className="self-center">
         <img className="px-1 py-1" src={pageOneRight} alt="pageOneRight" />
         <img className="px-1 py-1" src={pageOneLeft} alt="pageOneLeft" />
         <img className="px-1 py-1" src={pageTwoLeft} alt="pageTwoLeft" />
